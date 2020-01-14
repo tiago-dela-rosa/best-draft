@@ -5,31 +5,73 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Best Pick</title>
 	<link rel="stylesheet" href="">
+	<script src="libs/vue.js"></script>
 </head>
 <body>
 	<style>
-		body{ background: #333; }
+		body{ margin: 0; padding: 0; background: #333; }
+		.prompt{ width: auto; padding: 20px; background: #eee; }
+		.prompt .buttons { display: block; }
 	</style>
-
+	
+	<div id="app">
+		<div class="prompt">
+			Are you the first ou the second? {{ statePhase.orderTeamPick }}
+			<div class="buttons">
+				<button @click="statePhase.orderTeamPick = 'first'">First</button>
+				<button @click="statePhase.orderTeamPick = 'second'">Second</button>
+			</div>
+		</div>
+	</div>
 
 <script src="libs/lodash.js"></script>
-<script src="store/gods.js"></script>	
+<script src="store/gods.js"></script>
+<script src="components/ToolsToStore.js"></script>	
 <script>
+
+	var app = new Vue({
+	  el: '#app',
+	  
+	  data: {
+	  	statePhase: {
+	  		orderTeamPick: 'first',
+	  		currentPhase: 'ban_1' 
+	  	},
+	  	ranking: []	
+	  },
+
+	  computed: {
+	  	suggestions : function() {
+	  		return _.orderBy(this.ranking[0], ['ranking'], ['desc']).slice(0, 5);
+	  	} 	
+	  },
+
+	  methods: {
+
+	  	initRanking() {
+			let rank = gods.map((god) => {
+				return { name: god.name, ranking: god.data.meta } 
+			})
+			this.ranking.push(rank)	  		
+	  	}
+	  },
+	  beforeMount : function() {
+		this.initRanking();	  	 
+	  }
+	})	
 	
-	function getGodData(data, god){
-		return new Promise( (resolve, reject) => {
-			return resolve(_.find(data, { 'name' : god }));
-		}) 
-	}
-
-	function changeRole(god, role, state) {
-		god.roles[role] = state;		
-	}
-
-	getGodData(gods, 'A')
-	.then((data) => {
-		changeRole(data, 'role1', 100)
+	/* 	
+	getGodData(gods, 'Agni')
+	.then((resp) => {
+		 changeMatchup(gods, resp, 'Anubis', 10)
+		 return resp;
 	})
+	.then((resp) => {
+		 changeTeammate(gods, resp, 'Anubis', 100)
+	})
+	.then(() => {
+		 console.log(JSON.stringify(gods));
+	}); */
 
 </script>
 </body>
