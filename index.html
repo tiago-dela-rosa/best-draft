@@ -29,36 +29,65 @@
 <script src="components/ToolsToStore.js"></script>	
 <script>
 
-	var app = new Vue({
-	  el: '#app',
+var app = new Vue({
+	el: '#app',
 	  
-	  data: {
-	  	statePhase: {
-	  		orderTeamPick: 'first',
-	  		currentPhase: 'ban_1' 
-	  	},
-	  	ranking: []	
-	  },
+	data: {
+		roleAssigned: '',
+		statePhase: {
+			orderTeamPick: '',
+			currentPhase: 'ban_1' 
+		},
+		ranking: []	
+	},
 
-	  computed: {
-	  	suggestions : function() {
-	  		return _.orderBy(this.ranking[0], ['ranking'], ['desc']).slice(0, 5);
+	computed: {
+		suggestions : function() {
+			return _.orderBy(this.ranking, ['ranking'], ['desc']).slice(0, 5);
 	  	} 	
-	  },
+	},
 
-	  methods: {
+	watch: {
+		
+		statePhase: {
+			
+			handler: function(val, oldVal) {
+				
+				if(val.currentPhase == 'ban_1'){							
 
-	  	initRanking() {
-			let rank = gods.map((god) => {
-				return { name: god.name, ranking: god.data.meta } 
+					if(this.roleAssigned){
+
+						let newRank = this.ranking.map((pick, index) => {						
+							
+							let role = this.roleAssigned;
+							let rolePoints = gods[index].roles[role] * 0.3;
+
+							console.log(pick.ranking, rolePoints)
+
+							return { id: pick.id, name: pick.name, ranking: val.orderTeamPick ? (pick.ranking - rolePoints) : (pick.ranking + rolePoints) }  
+						})
+
+						_.assign(this.ranking, newRank);
+
+					}						
+				}
+			},
+			deep: true
+		} 
+	},	  
+
+	methods: {
+		initRanking() {
+			let rank = gods.map((god, index) => {
+				this.ranking.push({ id: index + 1, name: god.name, ranking: god.data.meta }) 
 			})
-			this.ranking.push(rank)	  		
-	  	}
-	  },
-	  beforeMount : function() {
-		this.initRanking();	  	 
-	  }
-	})	
+		}
+	},
+
+	beforeMount : function() {
+		this.initRanking();
+	}
+})	
 	
 	/* 	
 	getGodData(gods, 'Agni')

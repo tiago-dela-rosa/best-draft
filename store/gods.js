@@ -2,16 +2,16 @@ var gods = [
 	{
 		"name" : "Agni",
 		"data" : {
-			"stages" : ['early','mid', 'late'],
+			"stages" : ['mid'],
 			"damageType" : "magical",
 			"meta" : 3.5
 		},
 		"roles" : {
-			"carry" : 3,
-			"support" : 3,
-			"mid" : 3,
-			"jungle" : 3,
-			"solo" : 3
+			"carry" : 1,
+			"support" : 1,
+			"mid" : 5,
+			"jungle" : 2,
+			"solo" : 1
 		},
 		"matchups": [
 			{
@@ -154,11 +154,11 @@ var gods = [
 			"meta" : 2
 		},
 		"roles" : {
-			"carry" : 3,
-			"support" : 3,
-			"mid" : 3,
+			"carry" : 1,
+			"support" : 1,
+			"mid" : 5,
 			"jungle" : 3,
-			"solo" : 3
+			"solo" : 2
 		},
 		"matchups": [
 			{
@@ -301,10 +301,10 @@ var gods = [
 			"meta" : 2.5
 		},
 		"roles" : {
-			"carry" : 3,
-			"support" : 3,
-			"mid" : 3,
-			"jungle" : 3,
+			"carry" : 1,
+			"support" : 1,
+			"mid" : 1,
+			"jungle" : 5,
 			"solo" : 3
 		},
 		"matchups": [
@@ -448,11 +448,11 @@ var gods = [
 			"meta" : 2
 		},
 		"roles" : {
-			"carry" : 3,
-			"support" : 3,
-			"mid" : 3,
-			"jungle" : 3,
-			"solo" : 3
+			"carry" : 5,
+			"support" : 1,
+			"mid" : 2,
+			"jungle" : 2,
+			"solo" : 1
 		},
 		"matchups": [
 			{
@@ -595,10 +595,10 @@ var gods = [
 			"meta" : 2.5
 		},
 		"roles" : {
-			"carry" : 3,
-			"support" : 3,
-			"mid" : 3,
-			"jungle" : 3,
+			"carry" : 1,
+			"support" : 1,
+			"mid" : 1,
+			"jungle" : 5,
 			"solo" : 3
 		},
 		"matchups": [
@@ -742,11 +742,11 @@ var gods = [
 			"meta" : 2.5
 		},
 		"roles" : {
-			"carry" : 3,
-			"support" : 3,
-			"mid" : 3,
-			"jungle" : 3,
-			"solo" : 3
+			"carry" : 1,
+			"support" : 1,
+			"mid" : 4,
+			"jungle" : 1,
+			"solo" : 4
 		},
 		"matchups": [
 			{
@@ -890,9 +890,9 @@ var gods = [
 		},
 		"roles" : {
 			"carry" : 3,
-			"support" : 3,
-			"mid" : 3,
-			"jungle" : 3,
+			"support" : 1,
+			"mid" : 4,
+			"jungle" : 4,
 			"solo" : 3
 		},
 		"matchups": [
@@ -1036,10 +1036,10 @@ var gods = [
 			"meta" : 3.5
 		},
 		"roles" : {
-			"carry" : 3,
+			"carry" : 1,
 			"support" : 3,
-			"mid" : 3,
-			"jungle" : 3,
+			"mid" : 4,
+			"jungle" : 1,
 			"solo" : 3
 		},
 		"matchups": [
@@ -1183,11 +1183,11 @@ var gods = [
 			"meta" : 4
 		},
 		"roles" : {
-			"carry" : 3,
-			"support" : 3,
-			"mid" : 3,
-			"jungle" : 3,
-			"solo" : 3
+			"carry" : 1,
+			"support" : 1,
+			"mid" : 1,
+			"jungle" : 5,
+			"solo" : 2.5
 		},
 		"matchups": [
 			{
@@ -1331,10 +1331,10 @@ var gods = [
 		},
 		"roles" : {
 			"carry" : 3,
-			"support" : 3,
-			"mid" : 3,
-			"jungle" : 3,
-			"solo" : 3
+			"support" : 1,
+			"mid" : 1,
+			"jungle" : 5,
+			"solo" : 2.5
 		},
 		"matchups": [
 			{
@@ -1477,11 +1477,11 @@ var gods = [
 			"meta" : 3.5
 		},
 		"roles" : {
-			"carry" : 3,
-			"support" : 3,
-			"mid" : 3,
-			"jungle" : 3,
-			"solo" : 3
+			"carry" : 2.5,
+			"support" : 1,
+			"mid" : 5,
+			"jungle" : 1,
+			"solo" : 1
 		},
 		"matchups": [
 			{
@@ -1624,11 +1624,11 @@ var gods = [
 			"meta" : 2
 		},
 		"roles" : {
-			"carry" : 3,
+			"carry" : 1,
 			"support" : 3,
-			"mid" : 3,
+			"mid" : 1,
 			"jungle" : 3,
-			"solo" : 3
+			"solo" : 4
 		},
 		"matchups": [
 			{
@@ -1771,11 +1771,11 @@ var gods = [
 			"meta" : 2.5
 		},
 		"roles" : {
-			"carry" : 3,
-			"support" : 3,
-			"mid" : 3,
-			"jungle" : 3,
-			"solo" : 3
+			"carry" : 1.5,
+			"support" : 1,
+			"mid" : 5,
+			"jungle" : 1,
+			"solo" : 2.5
 		},
 		"matchups": [
 			{
@@ -1918,11 +1918,11 @@ var gods = [
 			"meta" : 3
 		},
 		"roles" : {
-			"carry" : 3,
-			"support" : 3,
-			"mid" : 3,
-			"jungle" : 3,
-			"solo" : 3
+			"carry" : 1,
+			"support" : 5,
+			"mid" : 1,
+			"jungle" : 1,
+			"solo" : 4
 		},
 		"matchups": [
 			{
@@ -2066,10 +2066,10 @@ var gods = [
 		},
 		"roles" : {
 			"carry" : 3,
-			"support" : 3,
-			"mid" : 3,
+			"support" : 1,
+			"mid" : 1,
 			"jungle" : 3,
-			"solo" : 3
+			"solo" : 5
 		},
 		"matchups": [
 			{
@@ -2212,9 +2212,9 @@ var gods = [
 			"meta" : 1.5
 		},
 		"roles" : {
-			"carry" : 3,
-			"support" : 3,
-			"mid" : 3,
+			"carry" : 1,
+			"support" : 5,
+			"mid" : 1,
 			"jungle" : 3,
 			"solo" : 3
 		},
@@ -2359,11 +2359,11 @@ var gods = [
 			"meta" : 2.5
 		},
 		"roles" : {
-			"carry" : 3,
-			"support" : 3,
-			"mid" : 3,
-			"jungle" : 3,
-			"solo" : 3
+			"carry" : 1,
+			"support" : 1,
+			"mid" : 5,
+			"jungle" : 1,
+			"solo" : 1
 		},
 		"matchups": [
 			{
@@ -2506,11 +2506,11 @@ var gods = [
 			"meta" : 4
 		},
 		"roles" : {
-			"carry" : 3,
-			"support" : 3,
-			"mid" : 3,
-			"jungle" : 3,
-			"solo" : 3
+			"carry" : 2.5,
+			"support" : 1,
+			"mid" : 1,
+			"jungle" : 4.5,
+			"solo" : 4
 		},
 		"matchups": [
 			{
@@ -2653,11 +2653,11 @@ var gods = [
 			"meta" : 4
 		},
 		"roles" : {
-			"carry" : 3,
-			"support" : 3,
-			"mid" : 3,
-			"jungle" : 3,
-			"solo" : 3
+			"carry" : 5,
+			"support" : 1,
+			"mid" : 4,
+			"jungle" : 2,
+			"solo" : 1
 		},
 		"matchups": [
 			{
@@ -2800,11 +2800,11 @@ var gods = [
 			"meta" : 3
 		},
 		"roles" : {
-			"carry" : 3,
-			"support" : 3,
+			"carry" : 5,
+			"support" : 1,
 			"mid" : 3,
-			"jungle" : 3,
-			"solo" : 3
+			"jungle" : 1,
+			"solo" : 1
 		},
 		"matchups": [
 			{
@@ -2947,11 +2947,11 @@ var gods = [
 			"meta" : 4.5
 		},
 		"roles" : {
-			"carry" : 3,
-			"support" : 3,
-			"mid" : 3,
-			"jungle" : 3,
-			"solo" : 3
+			"carry" : 2,
+			"support" : 2,
+			"mid" : 1,
+			"jungle" : 5,
+			"solo" : 3.5
 		},
 		"matchups": [
 			{
@@ -3094,11 +3094,11 @@ var gods = [
 			"meta" : 3
 		},
 		"roles" : {
-			"carry" : 3,
-			"support" : 3,
-			"mid" : 3,
-			"jungle" : 3,
-			"solo" : 3
+			"carry" : 1,
+			"support" : 5,
+			"mid" : 1,
+			"jungle" : 2,
+			"solo" : 2
 		},
 		"matchups": [
 			{
@@ -3241,11 +3241,11 @@ var gods = [
 			"meta" : 4.5
 		},
 		"roles" : {
-			"carry" : 3,
-			"support" : 3,
-			"mid" : 3,
+			"carry" : 5,
+			"support" : 1,
+			"mid" : 2,
 			"jungle" : 3,
-			"solo" : 3
+			"solo" : 2
 		},
 		"matchups": [
 			{
@@ -3389,10 +3389,10 @@ var gods = [
 		},
 		"roles" : {
 			"carry" : 3,
-			"support" : 3,
-			"mid" : 3,
+			"support" : 1,
+			"mid" : 2,
 			"jungle" : 3,
-			"solo" : 3
+			"solo" : 4
 		},
 		"matchups": [
 			{
@@ -3535,11 +3535,11 @@ var gods = [
 			"meta" : 3
 		},
 		"roles" : {
-			"carry" : 3,
-			"support" : 3,
-			"mid" : 3,
-			"jungle" : 3,
-			"solo" : 3
+			"carry" : 1,
+			"support" : 5,
+			"mid" : 1,
+			"jungle" : 2,
+			"solo" : 1
 		},
 		"matchups": [
 			{
@@ -3682,11 +3682,11 @@ var gods = [
 			"meta" : 2
 		},
 		"roles" : {
-			"carry" : 3,
-			"support" : 3,
-			"mid" : 3,
-			"jungle" : 3,
-			"solo" : 3
+			"carry" : 5,
+			"support" : 1,
+			"mid" : 2,
+			"jungle" : 1,
+			"solo" : 1
 		},
 		"matchups": [
 			{
