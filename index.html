@@ -57,14 +57,14 @@ var app = new Vue({
 
 					if(this.roleAssigned){
 
+						console.log('hello?')
+
 						let newRank = this.ranking.map((pick, index) => {						
 							
 							let role = this.roleAssigned;
-							let rolePoints = gods[index].roles[role] * 0.3;
+							let rolePoints = gods[index].roles[role] * 0.15;
 
-							console.log(pick.ranking, rolePoints)
-
-							return { id: pick.id, name: pick.name, ranking: val.orderTeamPick ? (pick.ranking - rolePoints) : (pick.ranking + rolePoints) }  
+							return { id: pick.id, name: pick.name, ranking: val.orderTeamPick == 'first' ? (pick.ranking - rolePoints) : (pick.ranking + rolePoints) }  
 						})
 
 						_.assign(this.ranking, newRank);
@@ -89,18 +89,168 @@ var app = new Vue({
 	}
 })	
 	
-	/* 	
-	getGodData(gods, 'Agni')
+	 	
+	// getGodData(gods, 'Agni')
+	// .then((resp) => {
+	// 	 changeMatchup(gods, resp, 'Anubis', 50)
+	// 	 changeTeammate(gods, resp, 'Anubis', 20)
+
+	// 	 changeMatchup(gods, resp, 'Arachne', 75)
+	// 	 changeTeammate(gods, resp, 'Arachne', 55)
+
+	// 	 changeMatchup(gods, resp, 'Artemis', 60)
+	// 	 changeTeammate(gods, resp, 'Artemis', 50)
+
+	// 	 changeMatchup(gods, resp, 'Bastet', 40)
+	// 	 changeTeammate(gods, resp, 'Bastet', 60)
+
+	// 	 changeMatchup(gods, resp, 'Hades', 55)
+	// 	 changeTeammate(gods, resp, 'Hades', 45)
+
+	// 	 changeMatchup(gods, resp, 'He Bo', 55)
+	// 	 changeTeammate(gods, resp, 'He Bo', 35)
+
+	// 	 changeMatchup(gods, resp, 'Hel', 50)
+	// 	 changeTeammate(gods, resp, 'Hel', 60)
+
+	// 	 changeMatchup(gods, resp, 'Hun Batz', 30)
+	// 	 changeTeammate(gods, resp, 'Hun Batz', 60)	
+
+	// 	 changeMatchup(gods, resp, 'Kali', 50)
+	// 	 changeTeammate(gods, resp, 'Kali', 55)	
+
+	// 	 changeMatchup(gods, resp, 'Kukulcan', 50)
+	// 	 changeTeammate(gods, resp, 'Kukulcan', 20)	
+
+	// 	 changeMatchup(gods, resp, 'Odin', 30)
+	// 	 changeTeammate(gods, resp, 'Odin', 55)	
+
+	// 	 changeMatchup(gods, resp, 'Ra', 40)
+	// 	 changeTeammate(gods, resp, 'Ra', 30)
+
+	// 	 changeMatchup(gods, resp, 'Sobek', 30)
+	// 	 changeTeammate(gods, resp, 'Sobek', 60)	
+
+	// 	 changeMatchup(gods, resp, 'Vamana', 25)
+	// 	 changeTeammate(gods, resp, 'Vamana', 55)
+
+	// 	 changeMatchup(gods, resp, 'Ymir', 40)
+	// 	 changeTeammate(gods, resp, 'Ymir', 50)	
+
+	// 	 changeMatchup(gods, resp, 'Zeus', 60)
+	// 	 changeTeammate(gods, resp, 'Zeus', 30)	
+
+	// 	 changeMatchup(gods, resp, 'Bakasura', 50)
+	// 	 changeTeammate(gods, resp, 'Bakasura', 60)
+
+	// 	 changeMatchup(gods, resp, 'Anhur', 30)
+	// 	 changeTeammate(gods, resp, 'Anhur', 60)
+
+	// 	 changeMatchup(gods, resp, 'Cupid', 40)
+	// 	 changeTeammate(gods, resp, 'Cupid', 60)
+
+	// 	 changeMatchup(gods, resp, 'Thor', 35)
+	// 	 changeTeammate(gods, resp, 'Thor', 60)	
+
+	// 	 changeMatchup(gods, resp, 'Ares', 35)
+	// 	 changeTeammate(gods, resp, 'Ares', 55)	
+
+	// 	 changeMatchup(gods, resp, 'Freya', 70)
+	// 	 changeTeammate(gods, resp, 'Freya', 60)
+
+	// 	 changeMatchup(gods, resp, 'Loki', 40)
+	// 	 changeTeammate(gods, resp, 'Loki', 50)	
+
+	// 	 changeMatchup(gods, resp, 'Bacchus', 45)
+	// 	 changeTeammate(gods, resp, 'Bacchus', 40)
+
+	// 	 changeMatchup(gods, resp, 'Xbalanque', 45)
+	// 	 changeTeammate(gods, resp, 'Xbalanque', 50)		 			 	 			 		 	 		 		 			 		 	 			 	 			 		  		 		 		 		 		 
+
+	// })
+	// .then(() => {
+	// 	 console.log(JSON.stringify(gods));
+	// }); 
+
+	getGodData(gods, 'Anubis')
 	.then((resp) => {
-		 changeMatchup(gods, resp, 'Anubis', 10)
-		 return resp;
-	})
-	.then((resp) => {
-		 changeTeammate(gods, resp, 'Anubis', 100)
+
+		 changeMatchup(gods, resp, 'Arachne', 70)
+		 changeTeammate(gods, resp, 'Arachne', 40)
+
+		 changeMatchup(gods, resp, 'Artemis', 60)
+		 changeTeammate(gods, resp, 'Artemis', 50)
+
+		 changeMatchup(gods, resp, 'Bastet', 40)
+		 changeTeammate(gods, resp, 'Bastet', 60)
+
+		 changeMatchup(gods, resp, 'Hades', 55)
+		 changeTeammate(gods, resp, 'Hades', 45)
+
+		 changeMatchup(gods, resp, 'He Bo', 55)
+		 changeTeammate(gods, resp, 'He Bo', 35)
+
+		 changeMatchup(gods, resp, 'Hel', 50)
+		 changeTeammate(gods, resp, 'Hel', 60)
+
+		 changeMatchup(gods, resp, 'Hun Batz', 30)
+		 changeTeammate(gods, resp, 'Hun Batz', 60)	
+
+		 changeMatchup(gods, resp, 'Kali', 50)
+		 changeTeammate(gods, resp, 'Kali', 55)	
+
+		 changeMatchup(gods, resp, 'Kukulcan', 50)
+		 changeTeammate(gods, resp, 'Kukulcan', 20)	
+
+		 changeMatchup(gods, resp, 'Odin', 30)
+		 changeTeammate(gods, resp, 'Odin', 55)	
+
+		 changeMatchup(gods, resp, 'Ra', 40)
+		 changeTeammate(gods, resp, 'Ra', 30)
+
+		 changeMatchup(gods, resp, 'Sobek', 30)
+		 changeTeammate(gods, resp, 'Sobek', 60)	
+
+		 changeMatchup(gods, resp, 'Vamana', 25)
+		 changeTeammate(gods, resp, 'Vamana', 55)
+
+		 changeMatchup(gods, resp, 'Ymir', 40)
+		 changeTeammate(gods, resp, 'Ymir', 50)	
+
+		 changeMatchup(gods, resp, 'Zeus', 60)
+		 changeTeammate(gods, resp, 'Zeus', 30)	
+
+		 changeMatchup(gods, resp, 'Bakasura', 50)
+		 changeTeammate(gods, resp, 'Bakasura', 60)
+
+		 changeMatchup(gods, resp, 'Anhur', 30)
+		 changeTeammate(gods, resp, 'Anhur', 60)
+
+		 changeMatchup(gods, resp, 'Cupid', 40)
+		 changeTeammate(gods, resp, 'Cupid', 60)
+
+		 changeMatchup(gods, resp, 'Thor', 35)
+		 changeTeammate(gods, resp, 'Thor', 60)	
+
+		 changeMatchup(gods, resp, 'Ares', 35)
+		 changeTeammate(gods, resp, 'Ares', 55)	
+
+		 changeMatchup(gods, resp, 'Freya', 70)
+		 changeTeammate(gods, resp, 'Freya', 60)
+
+		 changeMatchup(gods, resp, 'Loki', 40)
+		 changeTeammate(gods, resp, 'Loki', 50)	
+
+		 changeMatchup(gods, resp, 'Bacchus', 45)
+		 changeTeammate(gods, resp, 'Bacchus', 40)
+
+		 changeMatchup(gods, resp, 'Xbalanque', 45)
+		 changeTeammate(gods, resp, 'Xbalanque', 50)		 			 	 			 		 	 		 		 			 		 	 			 	 			 		  		 		 		 		 		 
+
 	})
 	.then(() => {
 		 console.log(JSON.stringify(gods));
-	}); */
+	}); 	
 
 </script>
 </body>
